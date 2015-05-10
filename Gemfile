@@ -33,6 +33,9 @@ gem 'quiet_assets', group: :development
 
 gem 'simple_form'
 
+gem 'devise', '~> 3.4.1'
+gem 'devise-i18n'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
