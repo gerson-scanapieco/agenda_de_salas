@@ -36,15 +36,6 @@ gem 'simple_form'
 gem 'devise', '~> 3.4.1'
 gem 'devise-i18n'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -63,3 +54,9 @@ group :development, :test do
   gem 'rack_session_access'
 end
 
+group :test do
+  gem 'shoulda-matchers', require: false
+  gem 'capybara', '~> 2'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+end
