@@ -20,7 +20,7 @@ RSpec.describe ReservationsHelper, type: :helper do
       end
 
       it 'returns a link with the text "Reservado para :current_user_email"' do
-        expect(helper.reservation_entry(reservations_array, 6, Date.today)).to eq link_to "Reservado para #{ reservation.user_email }", '#', 
+        expect(helper.reservation_entry(reservations_array, 6, Date.today)).to eq link_to "Reservado para #{ reservation.user_name }", '#', 
                 class: 'destroy-reservation-link', data: { id: reservation.id }
       end
     end
@@ -35,7 +35,7 @@ RSpec.describe ReservationsHelper, type: :helper do
       end
 
       it 'returns the text "Reservado para :another_user_email"' do
-        expect(helper.reservation_entry(reservations_array, 6, Date.today)).to eq "Reservado para #{ reservation.user_email }"
+        expect(helper.reservation_entry(reservations_array, 6, Date.today)).to eq "Reservado para #{ reservation.user_name }"
       end
     end
 

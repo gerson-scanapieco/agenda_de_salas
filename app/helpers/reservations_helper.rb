@@ -8,10 +8,10 @@ module ReservationsHelper
     end
 
     if reservation.user == current_user
-      link_to "Reservado para #{ reservation.user_email }", '#', 
+      link_to "Reservado para #{ reservation.user_name }", '#', 
                 class: 'destroy-reservation-link', data: { id: reservation.id }
     else
-      "Reservado para #{ reservation.user_email }"
+      "Reservado para #{ reservation.user_name }"
     end
   end
 

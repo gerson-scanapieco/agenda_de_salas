@@ -16,9 +16,9 @@ feature 'destroy a Reservation' do
 
     within '.reservations-table tbody' do
       within 'tr:nth-child(1) td:nth-child(2)' do
-        expect(page).to have_content "Reservado para #{ current_user.email }"
+        expect(page).to have_content "Reservado para #{ current_user.name }"
 
-        click_link "Reservado para #{ current_user.email }"
+        click_link "Reservado para #{ current_user.name }"
 
         expect(page).to have_content 'Reservar'
       end

@@ -14,7 +14,7 @@ feature 'create a Reservation' do
 
         click_link 'Reservar'
 
-        expect(page).to have_content "Reservado para #{ current_user.email }"
+        expect(page).to have_content "Reservado para #{ current_user.name }"
       end
     end
   end

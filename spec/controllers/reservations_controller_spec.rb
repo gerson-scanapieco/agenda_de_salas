@@ -23,7 +23,7 @@ RSpec.describe ReservationsController, type: :controller do
     it 'responds with a JSON containing information about the created Reservation' do
       post :create, format: 'json', reservation: { time: 6, date: Date.today }
 
-      expect(JSON.parse(response.body)["reservation"]["email"]).to eq @user.email
+      expect(JSON.parse(response.body)["reservation"]["name"]).to eq @user.name
       expect(JSON.parse(response.body)["reservation"]["id"]).to eq Reservation.last.id
     end
 

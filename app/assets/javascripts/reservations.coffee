@@ -15,7 +15,7 @@ $(document).on 'click', '.create-reservation-link', ->
   ).done( (response) ->
     cell.find(".create-reservation-link").replaceWith(
       [ "<a href='#' class='destroy-reservation-link' data-id='", response.reservation.id,"'>Reservado para", 
-        response.reservation.email, "</a>" ].join(" ") 
+        response.reservation.name, "</a>" ].join(" ") 
     )
   ).fail (jqXHR, textStatus, errorThrown) ->
     console.log(errorThrown)
