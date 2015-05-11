@@ -5,6 +5,8 @@ describe Date do
   describe '.get_current_week_commercial_days(current_date)' do
     
     before(:each) do
+      # Para a semana comercial desta data, o primeiro dia (segunda-feira) da semana
+      # eh 04/05/2015
       Timecop.freeze(Date.new(2015,5,10))
     end
 
