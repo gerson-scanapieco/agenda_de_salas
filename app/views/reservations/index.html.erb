@@ -18,16 +18,7 @@
 
             <% @week.each do |day| %>
               <td data-time=<%= time %> data-date=<%= I18n.l(day) %> >
-                <% if @reservations.get_reservation_by_time_and_date(time,day) %>
-                  <% if @reservations.get_reservation_by_time_and_date(time,day).user == current_user %> 
-                    <%= link_to "Reservado para #{ @reservations.get_reservation_by_time_and_date(time,day).user_email }", '#', 
-                      class: 'destroy-reservation-link', data: { id: @reservations.get_reservation_by_time_and_date(time,day).id } %>
-                  <% else %>
-                    <%= "Reservado para #{ @reservations.get_reservation_by_time_and_date(time,day).user_email }" %>
-                  <% end %>
-                <% else %>
-                  <%= link_to 'Reservar', '#', class: 'create-reservation-link' %>
-                <% end %>
+                <%= reservation_entry(@reservations, time, day) %>
               </td>
             <% end %>
           </tr>
