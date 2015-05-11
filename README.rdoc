@@ -1,28 +1,18 @@
-== README
+{<img src="https://codeclimate.com/github/gerson-scanapieco/agenda_de_salas/badges/gpa.svg" />}[https://codeclimate.com/github/gerson-scanapieco/agenda_de_salas] {<img src="https://codeclimate.com/github/gerson-scanapieco/agenda_de_salas/badges/coverage.svg" />}[https://codeclimate.com/github/gerson-scanapieco/agenda_de_salas/coverage]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Agenda de Salas
 
-Things you may want to cover:
+Aplicativo para reservar horarios em uma sala na semana atual,
+de 06:00 a 23:00, de segunda a sexta da semana atual.
 
-* Ruby version
+URl: https://gerson-agenda-de-sala.herokuapp.com
 
-* System dependencies
+Especificações:
 
-* Configuration
+* Ruby 2.2.1
 
-* Database creation
+* Rails 4.2.1
 
-* Database initialization
+* Postgresql 9.3.6
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Twitter Bootstrap 3.3.4
