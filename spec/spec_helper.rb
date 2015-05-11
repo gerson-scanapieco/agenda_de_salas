@@ -22,6 +22,12 @@ CodeClimate::TestReporter.start
 
 require "rack_session_access/capybara"
 
+if ENV['CIRCLE_ARTIFACTS']
+  require 'simplecov'
+  dir = File.join("..", "..", "..", ENV['CIRCLE_ARTIFACTS'], "coverage")
+  SimpleCov.coverage_dir(dir)
+end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
