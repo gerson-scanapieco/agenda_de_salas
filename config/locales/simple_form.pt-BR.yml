@@ -1,0 +1,9 @@
+pt-BR:
+  simple_form:
+    labels:
+      user:
+        name: 'Nome'
+        password: 'Senha'
+        password_confirmation: 'Confirme sua senha'
+        remember_me: 'Continuar conectado'
+        current_password: 'Senha atual'
